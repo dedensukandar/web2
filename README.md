@@ -1,2 +1,2 @@
-# web2
-pemrograman web 2
+# Pemrograma web 2
+Mata kuliah pemrograman web 2 Universitas Pamulang
