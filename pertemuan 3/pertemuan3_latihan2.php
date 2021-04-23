@@ -3,12 +3,13 @@
 <title>contoh Penggunaan IF</title> 
 </head> 
 <body> 
-<form> 
+<form action="" method="post"> 
  Besar Pembelian : 
-<input type=text name=total_beli><br><br> 
-<input type=submit value="Tentukan Diskon"> 
+<input type="text" name="total_beli"><br><br> 
+<input type="submit" value="Tentukan Diskon"> 
 </form> 
 <?php 
+$total_beli=$_POST['total_beli'];
  if (isset($total_beli)) 
  { 
  $total_beli=intval($total_beli); 
@@ -19,9 +20,10 @@
  else 
  $diskon=0.01; 
  
- $diskon=$diskon * intval($total_beli); 
- printf("Diskon = %s <br>\n", $diskon); 
- printf("Pembayaran = %s <br>\n", $total_beli-$diskon); 
+ $diskon=$diskon * intval($total_beli);
+ echo "Pembayaranmu = ", $total_beli , "<br>"; 
+ echo "Diskon = ", $diskon , "<br>"; 
+ echo "Pembayaran = ", $total_beli-$diskon; 
  } 
 ?> 
 </body> 
